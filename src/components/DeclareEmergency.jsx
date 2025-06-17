@@ -1,22 +1,46 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 const DeclareEmergency = () => {
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, {
+    once: true,
+    margin: "0px 0px -100px 0px"
+  });
+
   return (
-    <section className="px-4 md:px-10 pb-[30rem] md:pb-64">
-      <div className="grid grid-cols-1 lg:grid-cols-3">
-        {/* Left Sidebar Title */}
+    <section 
+      ref={containerRef}
+      className="px-4 md:px-10 pb-[30rem] md:pb-64"
+    >
+      <motion.div
+        className="grid grid-cols-1 lg:grid-cols-3"
+        initial={{ y: 100, opacity: 0 }}
+        animate={isInView ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 1, ease: 'easeOut' }}
+      >
+        {/* Left Sidebar Title - unchanged */}
         <div className="pb-2 mb-6 w-max lg:sticky lg:top-4 lg:self-start lg:z-10">
           <h2 className="text-[1.6rem] font-semibold py-2">Declare Emergency Now</h2>
         </div>
 
-        {/* Right Main Content */}
+        {/* Right Main Content - unchanged except for motion on elements */}
         <div className="lg:col-span-2">
-          {/* Description in second column */}
-          <p className="para-style mb-8 mt-2">
+          <motion.p 
+            className="para-style mb-8 mt-2"
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ delay: 0.2, duration: 0.8 }}
+          >
             Design Declares is open to individuals and institutions working in industrial, digital, graphic, communication and service design. To declare here, you must be a company with an office in the UK employing at least one full-time designer. We also welcome declarations from practising freelance designers who are registered as self-employed in the UK, and global supporters from other countries. All declarations will be named and published on this site.
-          </p>
-          {/* Form below description */}
-          <form className='space-y-8 border border-gray-300 p-4 md:p-12'>
+          </motion.p>
+
+          <motion.form 
+            className='space-y-8 border border-gray-300 p-4 md:p-12'
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.4, duration: 0.8 }}
+          >
             <h1 className="text-2xl md:text-[3.5rem] font-normal mb-8">I am Declaring Emergency</h1>
             <div className="mb-8 text-[18px] md:text-xl">
               <div className="flex flex-wrap gap-4 mb-6">
@@ -199,15 +223,15 @@ const DeclareEmergency = () => {
             </div>
 
             {/* Submit Button */}
-            <button 
+             <button 
               type="submit" 
               className="button-style"
             >
               Declare Emergency Now
             </button>
-          </form>
+          </motion.form>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
