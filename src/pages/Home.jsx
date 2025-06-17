@@ -9,10 +9,13 @@ import LatestEvents from '../components/LatestEvents'
 import NavigationMenu from '../components/NavigationMenu'
 import NewsletterSection from '../components/NewsletterSection'
 import Signatories from './Signatories'
+import GlobalSupporters from './GlobalSupporter'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
     <>
+      <div className='bg-black rounded-bl-4xl rounded-br-4xl'>
         <ExpandBar />
         <NavigationMenu />
         <DesignDeclares />
@@ -23,6 +26,11 @@ const Home = () => {
         <LatestEvents />
         <NewsletterSection />
         <Signatories />
+        <GlobalSupporters />
+      </div>
+      <div className='footer-part'>
+        <Footer />
+      </div>
     </>
   )
 }

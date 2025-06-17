@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body{
-  background-color: black;
+  background-color: #FF5630;
   color: #e0e4ea;
 }
 
@@ -12,6 +12,11 @@ body{
 
 * ::selection {
   background-color: #FF5630;
+  color: black;
+}
+
+.footer-part ::selection{
+  background-color: #eee;
   color: black;
 }
 

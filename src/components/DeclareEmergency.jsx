@@ -11,6 +11,7 @@ const DeclareEmergency = () => {
   return (
     <section 
       ref={containerRef}
+      id="declaration"
       className="px-4 md:px-10 pb-[30rem] md:pb-64"
     >
       <motion.div
