@@ -7,53 +7,56 @@ const DesignDeclares = () => {
   const [showMainContent, setShowMainContent] = useState(false);
 
   useEffect(() => {
-    const timer1 = setTimeout(() => setShowD(true), 200);      // Show D
-    const timer2 = setTimeout(() => setShowD(false), 1000);    // Hide D after 0.8s
-    const timer3 = setTimeout(() => setShowExclamation(true), 1100); // Show !
-    const timer4 = setTimeout(() => setShowExclamation(false), 1900); // Hide ! after 0.8s
-    const timer5 = setTimeout(() => setShowMainContent(true), 2200); // Show main content
+    const timer1 = setTimeout(() => setShowD(true), 200);           // Show D
+    const timer2 = setTimeout(() => setShowExclamation(true), 1000); // Show !
+    const timer3 = setTimeout(() => {
+      setShowD(false);
+      setShowExclamation(false);
+    }, 2000);                                                       // Hide both
+    const timer4 = setTimeout(() => setShowMainContent(true), 2200); // Show content
 
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
       clearTimeout(timer3);
       clearTimeout(timer4);
-      clearTimeout(timer5);
     };
   }, []);
+
 
   return (
     <section className="flex flex-col lg:flex-row justify-between px-6 py-6 md:px-8 relative h-screen">
 
-      {/* D Animation */}
+      {/* D appears */}
       <AnimatePresence>
         {showD && (
           <motion.span
-            className="absolute left-10 top-10 z-50 text-[3rem] md:text-[5rem] xl:text-[8rem] text-style font-extrabold text-white"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
-            transition={{ duration: 0.5 }}
+            className="absolute left-10 top-10 z-50 text-[3rem] md:text-[5rem] xl:text-[8rem] font-extrabold text-white"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
           >
             D
           </motion.span>
         )}
       </AnimatePresence>
 
-      {/* ! Animation */}
+      {/* ! appears */}
       <AnimatePresence>
         {showExclamation && (
           <motion.span
-            className="absolute left-36 top-10 z-50 text-[3rem] md:text-[5rem] xl:text-[8rem] text-style font-extrabold text-white"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
-            transition={{ duration: 0.5 }}
+            className="absolute left-36 top-10 z-50 text-[3rem] md:text-[5rem] xl:text-[8rem] font-extrabold text-white"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
           >
             !
           </motion.span>
         )}
       </AnimatePresence>
+
 
       {/* Left: Heading */}
       {showMainContent && (
@@ -74,12 +77,12 @@ const DesignDeclares = () => {
             {['Design', 'Declares', 'UK'].map((word, index) => (
               <motion.div
                 key={word}
-                className="relative block overflow-hidden"
+                className="relative block overflow-hidden text-style tracking-normal"
                 initial={{ y: 60, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.3 * index }}
               >
-                <span className={`relative z-10 text-style ${word === 'UK' ? 'text-[#FF5630]' : 'text-[#E4E4E4]'}`}>
+                <span className={`relative z-10 ${word === 'UK' ? 'text-[#FF5630]' : 'text-[#E4E4E4]'}`}>
                   {word}
                 </span>
                 <motion.span
