@@ -50,13 +50,13 @@ const NavigationMenu = () => {
           <a href="/about" className="flex items-center gap-3 h-12 px-3 border-b border-black hover:underline">
             <Info size={24} /> About
           </a>
-          <a href="#latest" className="flex items-center gap-3 h-12 px-3 border-b border-black hover:underline">
+          <a href="/latest" className="flex items-center gap-3 h-12 px-3 border-b border-black hover:underline">
             <Newspaper size={24} /> Latest
           </a>
-          <a href="#contact" className="flex items-center gap-3 h-12 px-3 border-b border-black hover:underline">
+          <a href="/contact" className="flex items-center gap-3 h-12 px-3 border-b border-black hover:underline">
             <Mail size={24} /> Contact
           </a>
-          <a href="#global" className="flex items-center gap-3 h-12 px-3 border-b border-black hover:underline">
+          <a href="/chooseglobal" className="flex items-center gap-3 h-12 px-3 border-b border-black hover:underline">
             <Globe size={24} /> Choose Global Chapter
           </a>
         </div>

@@ -1147,3 +1147,81 @@ export const globalSupporters = [
     ]
   }
 ];
+
+export const categories = ["All", "Events", "Case Studies", "Updates", "Perspective"];
+export const chapters = ["All", "D! UK", "D! Ireland", "D! Australia"];
+
+export const posts = [
+  {
+    type: "Case Studies",
+    chapter: "D! Ireland",
+    date: "30.04.2025, 04 PM:30",
+    title: "Embedding Sustainability in the Design Curriculum",
+    excerpt:
+      "Outlining the journey of how the Design Declares initiative was integrated into the National College of Art and Design's curriculum for BA Graphic Design students.",
+    image: "latest-category1.webp",
+  },
+  {
+    type: "Events",
+    chapter: "D! UK",
+    date: "24.04.2025, 03 PM:30",
+    title:
+      "SD4P Collective: How can Service Design drive meaningful sustainability impact",
+    excerpt: "Recap: SD4P Collective working session – 28th March 2025",
+    image: "latest-category2.jpg",
+  },
+  {
+    type: "Perspective",
+    chapter: "D! Australia",
+    date: "18.12.2024, 08 AM:38",
+    title: "Sasha Titchkosky Interview",
+    excerpt:
+      "An Interview with Koskela Founder and Design Declares Australia Board Member - Sasha Titchkosky",
+    image: "latest-category3.jpg",
+  },
+  {
+    type: "Perspective",
+    chapter: "D! Australia",
+    date: "10.12.2024, 08 AM:37",
+    title: "Andrew Simpson Interview",
+    excerpt:
+      "An Interview with Vert Design and Design Declares Australia CEO - Andew Simpson",
+    image: "latest-category1.webp",
+  },
+  {
+    type: "Events",
+    chapter: "D! UK",
+    date: "06.12.2024, 02 PM:30",
+    title: "Designing Tomorrow: Speculative Thinking Shapes Our Present",
+    excerpt:
+      "Design Declares' November Event Challenges Perspectives on Sustainability and Innovation",
+    image: "latest-category2.jpg",
+  },
+  {
+    type: "Events",
+    chapter: "D! Ireland",
+    date: "27.06.2024, 04 PM:30",
+    title: "D! June Event Recap",
+    excerpt:
+      "Design Declares has always been about people. From the moment that Design Council CDO Cat Drew introduced Alexie Sommer and Jo Barnard back in 2022, followed by Abb-d Taiyo and Aurelie Lionet coming onboard and aligning to the vision, we knew Design Declares was something special.",
+    image: "latest-category4.jpg",
+  },
+  {
+    type: "Case Studies",
+    chapter: "D! UK",
+    date: "26.06.2024, 02 PM:30",
+    title: "Reducing Website Carbon Emissions",
+    excerpt:
+      "In an industry first, MEK have documented exactly how they approached and solved this challenge so they can inspire others to do the same and help businesses transition to sustainable digital practices.",
+    image: "latest-category1.webp",
+  },
+  {
+    type: "Updates",
+    chapter: "D! UK",
+    date: "01.06.2023, 04 PM:30",
+    title: "What's the future for Design Declares?",
+    excerpt:
+      "A few months ago, an article by Chris Hockell was published in Dezeen criticising Architects Declare for failing to live up to its ambitions.",
+    image: "latest-category4.jpg",
+  },
+];
