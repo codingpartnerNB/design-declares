@@ -16,7 +16,7 @@ const NavigationMenu = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 text-black font-medium w-full sm:w-auto px-4 sm:px-0">
+    <div className="fixed bottom-6 right-0 sm:right-6 z-50 text-black font-medium w-full sm:w-auto px-4 sm:px-0">
       <div
         className={`overflow-hidden bg-[#eee] border border-black shadow-lg transition-all duration-300 ease-in-out ${
           isWidthExpanded ? 'w-full sm:w-[24rem]' : 'w-full sm:w-[14rem]'
@@ -47,7 +47,7 @@ const NavigationMenu = () => {
           <a href="/" className="flex items-center gap-3 h-12 px-3 border-b border-black hover:underline">
             <Home size={24} /> Home
           </a>
-          <a href="#about" className="flex items-center gap-3 h-12 px-3 border-b border-black hover:underline">
+          <a href="/about" className="flex items-center gap-3 h-12 px-3 border-b border-black hover:underline">
             <Info size={24} /> About
           </a>
           <a href="#latest" className="flex items-center gap-3 h-12 px-3 border-b border-black hover:underline">
@@ -76,7 +76,7 @@ const NavigationMenu = () => {
 
         {/* Always visible - Declare Now */}
         <a
-          href="#declaration"
+          href="/#declaration"
           className="text-2xl h-12 px-3 flex items-center hover:bg-[#FF5630] transition-colors"
         >
           Declare Now
