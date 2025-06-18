@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Layout from './components/Layout';
 import LatestCategories from './pages/LatestCategories';
 import ChooseGlobal from './components/ChooseGlobal';
+import NotFoundPage from './pages/NotFoundPage';
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="contact" element={<ContactForm />} />
           <Route path="latest" element={<LatestCategories />} />
           <Route path="chooseglobal" element={<ChooseGlobal />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </Router>
